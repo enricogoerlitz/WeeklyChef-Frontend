@@ -1,0 +1,36 @@
+Kontext:
+- JSON Struktur zu python django models
+- es geht um eine rezepte app, welche rezepte, nutzer, einkaufslisten managed
+
+Kannst du mir aus folgender JSON Struktur, entsprechende Django models mit den nötigen foreignkeys erstellen.
+
+implementiere für jedes model eine sub meta klasse wie diese:
+class Meta:
+        db_table = "recipe"
+        und auch: "unique_together", wenn sinnvoll!
+
+
+implementiere ebenso def __str__ wie diese:
+def __str__(self) -> str:
+        return f"{self.id}_{self.unit_name}"
+
+
+implementiere ebenfalls sinnvolle restriktionen wie:
+- max_length
+- min_length
+- unique
+- null
+- blank
+- max_digits
+- decimal_places
+- models.CASCADE
+- models.BigAutoField(primary_key=True), für alle ids
+
+
+Weitere Anmerkungen:
+- Bitte nutze auch diese namen in lower Camelcase!
+- Bitte implementiere die verbindungen der tabellen ohne composite tables. d.h z.B. bei "cart" und deren "cartPlanEntries", nutze bitte eine ManyToOne oder OneToMany beziehung, damit ich das model wie ein array nutzen kann. Und diese logik übernehme bitte überall, wo du eine composite table erstellen würdest!
+
+
+JSON Struktur:
+...

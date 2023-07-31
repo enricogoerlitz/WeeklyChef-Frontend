@@ -1,0 +1,192 @@
+{
+    "recipe": [
+        {
+            "recipeId": 1,
+            "recipeName": "",
+            "portionCount": 2,
+            "preparationDescription": "",
+            "recipeIngredients": [
+                {
+                    "ingredient": {},
+                    "unitQuantity": 200
+                }
+            ],
+            "recipeCategories": [],
+            "recipeTags": [],
+            "searchDescription": "",
+            "recipeRatings": [],
+            "difficultAssessment": "",
+            "preparationTime": 15,
+            "isEditMode": false,
+            "images": [],
+            "creator": {},
+            "lastUpdateUser": {},
+            "createdAt": "2023-07-01 10:00:00",
+            "updatedAt": "2023-07-01 10:00:00"
+        }
+    ],
+    "ingredient": [
+        {
+            "ingredientId": 1,
+            "ingredientName": "",
+            "unit": {},
+            "defaultPrice": 1.49,
+            "image": "",
+            "creator": {},
+            "lastUpdateUser": {},
+            "createdAt": "2023-07-01 10:00:00",
+            "updatedAt": "2023-07-01 10:00:00"
+        }
+    ],
+    "ingredientProduct": [
+        {
+            "ingredientProductId": 1,
+            "ingredientProductName": "",
+            "ingredientMapping": {},
+            "unitQuantity": 200,
+            "brand": {},
+            "price": 1.69,
+            "lastUpdateUser": {},
+            "createdAt": "2023-07-01 10:00:00",
+            "updatedAt": "2023-07-01 10:00:00"
+        }
+    ],
+    "userIngredientPreference": [
+        {
+            "userIngredientPreferenceId": 1,
+            "user": {},
+            "ingredient": {},
+            "ingredientProduct": {},
+            "createdAt": "2023-07-01 10:00:00",
+            "updatedAt": "2023-07-01 10:00:00"
+        }
+    ],
+    "store": [
+        {
+            "storeId": 1,
+            "storeName": "",
+            "street": "",
+            "streetNumber": "",
+            "postCode": "",
+            "district": "",
+            "state": "",
+            "creator": {},
+            "lastUpdateUser": {},
+            "createdAt": "2023-07-01 10:00:00",
+            "updatedAt": "2023-07-01 10:00:00"
+        }
+    ],
+    "recipeRating": [
+        {
+            "recipeRatingId": 1,
+            "starRating": 4.5,
+            "comment": "",
+            "user": {},
+            "createdAt": "2023-07-01 10:00:00",
+            "updatedAt": "2023-07-01 10:00:00"
+        }
+    ],
+    "unit": [
+        {
+            "unitId": 1,
+            "unitName": "",
+            "creator": {},
+            "lastUpdateUser": {},
+            "createdAt": "2023-07-01 10:00:00",
+            "updatedAt": "2023-07-01 10:00:00"
+        }
+    ],
+    "cart": [
+        {
+            "cartId": 1,
+            "cartName": "",
+            "user": {},
+            "sharedWithUsers": [],
+            "cartPlanEntries": [],
+            "lastUpdateUser": {},
+            "createdAt": "2023-07-01 10:00:00",
+            "updatedAt": "2023-07-01 10:00:00"
+        },
+        {}
+    ],
+    "recipeCategory": [
+        {
+            "recipeCategoryId": 1,
+            "recipeCategoryName": "",
+            "creator": {},
+            "lastUpdateUser": {},
+            "createdAt": "2023-07-01 10:00:00",
+            "updatedAt": "2023-07-01 10:00:00"
+        }
+    ],
+    "recipeTag": [
+        {
+            "recipeTagId": 1,
+            "recipeTagName": "",
+            "creator": {},
+            "lastUpdateUser": {},
+            "createdAt": "2023-07-01 10:00:00",
+            "updatedAt": "2023-07-01 10:00:00"
+        }
+    ],
+    "brand": [
+        {
+            "brandId": 1,
+            "brandName": "",
+            "creator": {},
+            "lastUpdateUser": {},
+            "createdAt": "2023-07-01 10:00:00",
+            "updatedAt": "2023-07-01 10:00:00"
+        }
+    ],
+    "cartPlanEntry": [
+        {
+            "cartPlanEntryId": 1,
+            "planDate": "2023-07-01 10:00:00",
+            "dayTime": {},
+            "recipe": {},
+            "creator": {},
+            "lastUpdateUser": {},
+            "createdAt": "2023-07-01 10:00:00",
+            "updatedAt": "2023-07-01 10:00:00"
+        }
+    ],
+    "dayTime": [
+        {
+            "dayTimeId": 1,
+            "dayTimeName": "FRÜHSTÜCK|MITTAG|ABENDESSEN",
+            "creator": {},
+            "lastUpdateUser": {},
+            "createdAt": "2023-07-01 10:00:00",
+            "updatedAt": "2023-07-01 10:00:00"
+        }
+    ],
+    "difficultAssessment": [
+        {
+            "difficultAssessmentId": 1,
+            "difficultAssessmentName": "",
+            "user": {},
+            "createdAt": "2023-07-01 10:00:00",
+            "updatedAt": "2023-07-01 10:00:00"
+        }
+    ],
+    "user": {
+        "username": "",
+        "password": "",
+        "email": "",
+        "isEmailConfirmed": true,
+        "roles": [],
+        "createdAt": "2023-07-01 10:00:00",
+        "updatedAt": "2023-07-01 10:00:00"
+    },
+    "role": [
+        {
+            "roleId": 1,
+            "roleName": "USER, MOD, ADMIN",
+            "creator": {},
+            "lastUpdateUser": {},
+            "createdAt": "2023-07-01 10:00:00",
+            "updatedAt": "2023-07-01 10:00:00"
+        }
+    ]
+}
