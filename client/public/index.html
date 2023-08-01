@@ -21,7 +21,7 @@
                 window.addEventListener("load", () => {
                 navigator.serviceWorker.register("%PUBLIC_URL%/serviceworker.js")
                     .then((reg) => console.log("serviceWorker Success", reg.scope))
-                    .catch((err) => console.log("ERR AT SERVICEWORKER:", err));
+                    .catch((err) => console.log("ERROR AT SERVICEWORKER:", err));
                 })
             }
         </script>
