@@ -3,14 +3,14 @@ import MainLayout from "../../layouts/MainLayout/MainLayout";
 import { PageSelection } from "../../utils/enums";
 
 interface IProps {}
-const RecipeCreateEditPage: React.FC = (props) => {
+const CreatePage: React.FC<IProps> = (props) => {
     return (
-        <MainLayout pageSelection={PageSelection.DASHBOARDPAGE}>
+        <MainLayout pageSelection={PageSelection.CREATEPAGE}>
             <MainLayout.Content>
-                <h1>RecipeCreateEditPage</h1>
+                <h1>Create Page</h1>
             </MainLayout.Content>
         </MainLayout>
     );
 }
  
-export default RecipeCreateEditPage;
+export default CreatePage;

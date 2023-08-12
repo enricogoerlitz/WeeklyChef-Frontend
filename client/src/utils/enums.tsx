@@ -1,0 +1,7 @@
+export enum PageSelection {
+    DASHBOARDPAGE,
+    LISTOVERVIEWPAGE,
+    CREATEPAGE,
+    FAVOURITECOLLECTIONPAGE,
+    CARTPAGE,
+}

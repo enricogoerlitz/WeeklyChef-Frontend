@@ -1,8 +1,45 @@
 import React from "react";
+import MainLayout from "../../layouts/MainLayout/MainLayout";
+import { PageSelection } from "../../utils/enums";
+import "./DashboardPage.scss"
 
-const DashboardPage: React.FC = () => {
+interface IProps {}
+const DashboardPage: React.FC<IProps> = (props) => {
     return (
-        <h1>Dashboard</h1>
+        <MainLayout pageSelection={PageSelection.DASHBOARDPAGE}>
+            <MainLayout.Content>
+                <ul>
+                    <li>Dashboard</li>
+                    <li>Dashboard</li>
+                    <li>Dashboard</li>
+                    <li>Dashboard</li>
+                    <li>Dashboard</li>
+                    <li>Dashboard</li>
+                    <li>Dashboard</li>
+                    <li>Dashboard</li>
+                    <li>Dashboard</li>
+                    <li>Dashboard</li>
+                    <li>Dashboard</li>
+                    <li>Dashboard</li>
+                    <li>Dashboard</li>
+                    <li>Dashboard</li>
+                    <li>Dashboard</li>
+                    <li>Dashboard</li>
+                    <li>Dashboard</li>
+                    <li>Dashboard</li>
+                    <li>Dashboard</li>
+                    <li>Dashboard</li>
+                    <li>Dashboard</li>
+                    <li>Dashboard</li>
+                    <li>Dashboard</li>
+                    <li>Dashboard</li>
+                    <li>Dashboard</li>
+                    <li>Dashboard</li>
+                    <li>Dashboard</li>
+                    <li>Dashboard</li>
+                </ul>
+            </MainLayout.Content>
+        </MainLayout>
     );
 }
  

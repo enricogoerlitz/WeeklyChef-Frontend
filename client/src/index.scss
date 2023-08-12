@@ -14,7 +14,11 @@ code {
         monospace;
 }
 
-p, ul, li, ol {
+p {
     all: unset;
+}
+
+::-webkit-scrollbar {
+    display: none;
 }
   
