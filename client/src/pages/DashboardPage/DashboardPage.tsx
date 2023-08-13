@@ -37,6 +37,12 @@ const DashboardPage: React.FC<IProps> = (props) => {
                     <li>Dashboard</li>
                     <li>Dashboard</li>
                     <li>Dashboard</li>
+                    <li>Dashboard</li>
+                    <li>Dashboard</li>
+                    <li>Dashboard</li>
+                    <li>Dashboard</li>
+                    <li>Dashboard</li>
+                    <li>- - - - - - - - - - - - LAST - - - - - - - - - - - -</li>
                 </ul>
             </MainLayout.Content>
         </MainLayout>

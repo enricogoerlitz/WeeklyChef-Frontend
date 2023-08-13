@@ -2,20 +2,19 @@
 
 .main-layout-container {
     &__content {
-        overflow-y: auto;
-        bottom: $bottom-navigation-height;
         margin-top: $header-height;
+        margin-bottom: $bottom-navigation-height;
         background-color: red;
 
         &::-webkit-scrollbar {
-            width: 10px; /* Breite der Scrollbar anpassen */
+            width: 10px;
         }
         &::-webkit-scrollbar-track {
-            background-color: #f1f1f1; /* Hintergrundfarbe der Scrollbar-Spur */
+            background-color: #f1f1f1;
         }
         &::-webkit-scrollbar-thumb {
-            background-color: #888; /* Farbe des Scrollbar-Thumb */
-            border-radius: 5px; /* Abrundung der Ecken des Thumb */
+            background-color: #888;
+            border-radius: 5px;
         }
     }
 }

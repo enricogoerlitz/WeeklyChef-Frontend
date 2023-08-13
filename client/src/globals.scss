@@ -1,3 +1,15 @@
+// colors
+$primary-color: #5730fd;
+
+// sizes
 $test-var: 50px;
-$bottom-navigation-height: 4rem;
+$bottom-navigation-height: 4.5rem;
+$bottom-navigation-height-ios: 6.5rem;
 $header-height: 3rem;
+
+// keyframes
+$animation-fade-in-opacity: animation-fade-in-opacity;
+@keyframes #{$animation-fade-in-opacity} {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
