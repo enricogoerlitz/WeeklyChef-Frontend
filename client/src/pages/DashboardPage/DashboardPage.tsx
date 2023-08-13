@@ -6,7 +6,11 @@ import "./DashboardPage.scss"
 interface IProps {}
 const DashboardPage: React.FC<IProps> = (props) => {
     return (
-        <MainLayout pageSelection={PageSelection.DASHBOARDPAGE}>
+        <MainLayout
+            pageSelection={PageSelection.DASHBOARDPAGE}
+            headerText="For You"
+            showBackButton={true}
+        >
             <MainLayout.Content>
                 <ul>
                     <li>Dashboard</li>

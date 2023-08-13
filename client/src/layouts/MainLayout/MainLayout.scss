@@ -2,19 +2,13 @@
 
 .main-layout-container {
     &__content {
-        margin-top: $header-height;
+        margin-top: $header-height-mobile;
         margin-bottom: $bottom-navigation-height;
         background-color: red;
 
-        &::-webkit-scrollbar {
-            width: 10px;
-        }
-        &::-webkit-scrollbar-track {
-            background-color: #f1f1f1;
-        }
-        &::-webkit-scrollbar-thumb {
-            background-color: #888;
-            border-radius: 5px;
+        @media (min-width: $bp-lg) {
+            margin-top: $header-height-desktop;
+            margin-bottom: 0;
         }
     }
 }

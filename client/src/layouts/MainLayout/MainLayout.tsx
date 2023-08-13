@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "../Header/Header"
-import { IBaseProps, IPropsPageSelection } from "../../utils/interfaces";
+import { IBaseProps, IPropsNavigation } from "../../utils/interfaces";
 import BottomNavigationBar from "../BottomNavigationBar/BottomNavigationBar";
 import "./MainLayout.scss"
 
@@ -23,11 +23,15 @@ type MainLayoutType = {
     RightSide: typeof RightSide;
 }
 
-interface IProps extends IBaseProps, IPropsPageSelection {}
+interface IProps extends IBaseProps, IPropsNavigation {}
 const MainLayout: React.FC<IProps> & MainLayoutType = (props) => {
     return (
         <div className="main-layout-container">
-            <Header />
+            <Header
+                headerText={props.headerText}
+                showBackButton={props.showBackButton}
+                pageSelection={props.pageSelection}
+            />
             {props.children}
             <BottomNavigationBar pageSelection={props.pageSelection} />
         </div>

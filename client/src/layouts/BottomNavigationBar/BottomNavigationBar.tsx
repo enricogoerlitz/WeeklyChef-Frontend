@@ -14,7 +14,6 @@ const BottomNavigationBar: React.FC<IProps> = (props) => {
         const isIOS = isIOSDevice();
         let navClassName = "bottom-navigation-ctn";
         navClassName += isIOS ? " ios-bottom-nav" : "";
-        console.log(navClassName, isIOS);
         return navClassName;
     }
 
@@ -28,7 +27,6 @@ const BottomNavigationBar: React.FC<IProps> = (props) => {
                 className={getSelectionClassName(PageSelection.DASHBOARDPAGE)}
                 to={Routes.DASHBOARDPAGE}
             >
-                
                 <House className="bottom-navigation-ctn__item__icon" />
                 <p className="bottom-navigation-ctn__item__text">Dashboard</p>
             </Link>

@@ -3,17 +3,17 @@ import MainLayout from "../../layouts/MainLayout/MainLayout";
 import { PageSelection } from "../../utils/enums";
 
 interface IProps {}
-const CartPage: React.FC<IProps> = (props) => {
+const UserPage: React.FC<IProps> = (props) => {
     return (
         <MainLayout
-            pageSelection={PageSelection.CARTPAGE}
-            headerText="Einkauf"
+            pageSelection={PageSelection.USERPAGE}
+            headerText="Benutzereinstellungen"
         >
             <MainLayout.Content>
-                <h1>CartPage</h1>
+                <h1>UserPage</h1>
             </MainLayout.Content>
         </MainLayout>
     );
 }
  
-export default CartPage;
+export default UserPage;

@@ -5,7 +5,10 @@ import { PageSelection } from "../../utils/enums";
 interface IProps {}
 const RecipeCreateEditPage: React.FC = (props) => {
     return (
-        <MainLayout pageSelection={PageSelection.DASHBOARDPAGE}>
+        <MainLayout
+            pageSelection={PageSelection.CREATEPAGE}
+            headerText="Erstellen"
+        >
             <MainLayout.Content>
                 <h1>RecipeCreateEditPage</h1>
             </MainLayout.Content>

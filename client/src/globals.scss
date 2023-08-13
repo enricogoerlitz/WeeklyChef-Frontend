@@ -1,11 +1,23 @@
+// breakpoints
+$bp-sm: 576px;
+$bp-ml: 768px;
+$bp-lg: 992px;
+$bp-xl: 1200px;
+$bp-xxl: 1400px;
+$bp-xxxl: 1650px;
+
 // colors
 $primary-color: #5730fd;
+
+// fonts
+$app-title-fs: 'Dancing Script', cursive;
 
 // sizes
 $test-var: 50px;
 $bottom-navigation-height: 4.5rem;
 $bottom-navigation-height-ios: 6.5rem;
-$header-height: 3rem;
+$header-height-mobile: 2.5rem;
+$header-height-desktop: 4rem;
 
 // keyframes
 $animation-fade-in-opacity: animation-fade-in-opacity;

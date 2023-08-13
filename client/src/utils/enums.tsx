@@ -4,4 +4,5 @@ export enum PageSelection {
     CREATEPAGE,
     FAVOURITECOLLECTIONPAGE,
     CARTPAGE,
+    USERPAGE,
 }

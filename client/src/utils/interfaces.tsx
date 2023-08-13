@@ -13,3 +13,10 @@ export interface IPropsPageSelection {
 export interface IPropsIsSelected {
 	isSelected: boolean;
 }
+
+export interface IPropsHeader {
+	headerText: string;
+	showBackButton?: boolean;
+}
+
+export interface IPropsNavigation extends IPropsPageSelection, IPropsHeader {}

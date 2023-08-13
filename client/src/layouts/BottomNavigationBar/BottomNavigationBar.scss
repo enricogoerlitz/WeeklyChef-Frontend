@@ -4,7 +4,7 @@ $nav-icon-size: 1.5rem;
 $nav-main-icon-size: $nav-icon-size + .2rem;
 $nav-text-size: .7rem;
 $item-size: 3rem;
-$main-item-size: 4rem;
+$main-item-size: 3.5rem;
 $text-animation-duration: .3s; // Anpassbare Dauer der Animation
 $icon-animation-duration: .1s; // Anpassbare Dauer der Animation
 
@@ -78,8 +78,11 @@ $animation-move-nav-icon-up: animation-move-nav-icon-up;
                 transition: transform 1s;
                 animation: $animation-move-nav-icon-up $icon-animation-duration ease-in;
             }
-
         }
+    }
+
+    @media (min-width: $bp-lg) {
+        display: none;
     }
 
 }
