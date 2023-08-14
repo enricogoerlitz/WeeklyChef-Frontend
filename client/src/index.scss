@@ -8,7 +8,6 @@ body {
         sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: #fff;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0); // removes the ios background color by clicking
   }
   
@@ -21,6 +20,3 @@ p {
     all: unset;
 }
 
-::-webkit-scrollbar {
-    display: none;
-}

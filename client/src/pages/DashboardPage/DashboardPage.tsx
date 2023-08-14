@@ -12,42 +12,56 @@ const DashboardPage: React.FC<IProps> = (props) => {
             showBackButton={true}
         >
             <MainLayout.Content>
-                <ul>
-                    <li>Dashboard</li>
-                    <li>Dashboard</li>
-                    <li>Dashboard</li>
-                    <li>Dashboard</li>
-                    <li>Dashboard</li>
-                    <li>Dashboard</li>
-                    <li>Dashboard</li>
-                    <li>Dashboard</li>
-                    <li>Dashboard</li>
-                    <li>Dashboard</li>
-                    <li>Dashboard</li>
-                    <li>Dashboard</li>
-                    <li>Dashboard</li>
-                    <li>Dashboard</li>
-                    <li>Dashboard</li>
-                    <li>Dashboard</li>
-                    <li>Dashboard</li>
-                    <li>Dashboard</li>
-                    <li>Dashboard</li>
-                    <li>Dashboard</li>
-                    <li>Dashboard</li>
-                    <li>Dashboard</li>
-                    <li>Dashboard</li>
-                    <li>Dashboard</li>
-                    <li>Dashboard</li>
-                    <li>Dashboard</li>
-                    <li>Dashboard</li>
-                    <li>Dashboard</li>
-                    <li>Dashboard</li>
-                    <li>Dashboard</li>
-                    <li>Dashboard</li>
-                    <li>Dashboard</li>
-                    <li>Dashboard</li>
-                    <li>- - - - - - - - - - - - LAST - - - - - - - - - - - -</li>
-                </ul>
+                <div>- - - - - - - - - START - - - - - - - - </div>
+                <div>Dashboard</div>
+                <div>Dashboard</div>
+                <div>Dashboard</div>
+                <div>Dashboard</div>
+                <div>Dashboard</div>
+                <div>Dashboard</div>
+                <div>Dashboard</div>
+                <div>Dashboard</div>
+                <div>Dashboard</div>
+                <div>Dashboard</div>
+                <div>Dashboard</div>
+                <div>Dashboard</div>
+                <div>Dashboard</div>
+                <div>Dashboard</div>
+                <div>Dashboard</div>
+                <div>Dashboard</div>
+                <div>Dashboard</div>
+                <div>Dashboard</div>
+                <div>Dashboard</div>
+                <div>Dashboard</div>
+                <div>Dashboard</div>
+                <div>Dashboard</div>
+                <div>Dashboard</div>
+                <div>Dashboard</div>
+                <div>Dashboard</div>
+                <div>Dashboard</div>
+                <div>Dashboard</div>
+                <div>Dashboard</div>
+                <div>Dashboard</div>
+                <div>Dashboard</div>
+                <div>Dashboard</div>
+                <div>Dashboard</div>
+                <div>Dashboard</div>
+                <div>Dashboard</div>
+                <div>Dashboard</div>
+                <div>Dashboard</div>
+                <div>Dashboard</div>
+                <div>Dashboard</div>
+                <div>Dashboard</div>
+                <div>Dashboard</div>
+                <div>Dashboard</div>
+                <div>Dashboard</div>
+                <div>Dashboard</div>
+                <div>Dashboard</div>
+                <div>Dashboard</div>
+                <div>Dashboard</div>
+                <div>Dashboard</div>
+                <div>Dashboard</div>
+                <div>- - - - - - - - - - - LAST ITEM - - - - - - - - - - - </div>
             </MainLayout.Content>
         </MainLayout>
     );

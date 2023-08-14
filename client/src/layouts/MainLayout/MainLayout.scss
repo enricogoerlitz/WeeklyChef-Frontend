@@ -2,13 +2,22 @@
 
 .main-layout-container {
     &__content {
-        margin-top: $header-height-mobile;
-        margin-bottom: $bottom-navigation-height;
+        position: fixed;
+        top: $header-height-mobile;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding-bottom: $bottom-navigation-height-ios + 1rem;
+        overflow-y: auto;
+        // margin-top: $header-height-mobile;
+        // margin-bottom: $bottom-navigation-height;
         background-color: red;
 
         @media (min-width: $bp-lg) {
-            margin-top: $header-height-desktop;
-            margin-bottom: 0;
+            // margin-top: $header-height-desktop;
+            // margin-bottom: 0;
+            top: $header-height-desktop;
+            bottom: 0;
         }
     }
 }

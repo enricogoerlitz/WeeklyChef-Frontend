@@ -1,10 +1,13 @@
 import React from "react";
-import { Search, ChevronLeft, PersonCircle, ClipboardPlusFill, House, Cart3, Bookmarks, EggFried, Fire } from "react-bootstrap-icons"
+import { Search, PersonCircle, ClipboardPlusFill, House, Cart3, Bookmarks, EggFried } from "react-bootstrap-icons"
 import { IPropsHeader, IPropsPageSelection } from "../../utils/interfaces";
 import Routes from "../../utils/routes";
 import { Link } from "react-router-dom";
 import { PageSelection } from "../../utils/enums";
+import HeaderNavigationItem from "./HeaderNavigationItem";
+import HeaderBackIcon, { HeaderBackIconType} from "./HeaderBackIcon";
 import "./Header.scss";
+import HeaderAppTitle from "./HeaderAppTitle";
 
 interface IProps extends IPropsHeader, IPropsPageSelection {}
 const Header: React.FC<IProps> = (props) => {
@@ -13,22 +16,15 @@ const Header: React.FC<IProps> = (props) => {
         return props.pageSelection === selectedItem ? "header__navigation__item active" : "header__navigation__item";
     };
 
+    const isActivePage = (pageSelection: PageSelection) =>
+            props.pageSelection === pageSelection;
+
     return (
         <header className="header">
-            {props.showBackButton ?
-                <div className="header__back-icon">
-                    <ChevronLeft
-                    onClick={() => window.history.back()}
-                    />
-                </div> :
-                <div className="header__back-icon"></div>
-            }
-            <Link to={Routes.DASHBOARDPAGE} className="header__title desktop">
-                <Fire />
-                <h1 className="header__title__app-name">WeeklyChef</h1>
-            </Link>
+            <HeaderBackIcon showOption={props.showBackButton ? HeaderBackIconType.SHOW : HeaderBackIconType.HIDE_WITH_HIDDEN_ELEMENT}/>
+            <HeaderAppTitle />
             <h1 className="header__title app">{props.headerText}</h1>
-            <div className="header__search">
+            <div className="header__search"> {/* source out into a generic search input */}
                 <Search className="header__search__icon" />
                 <input className="header__search__input" type="text" placeholder="Search" />
                 <ul className="header__search__input-dropdown">
@@ -42,41 +38,36 @@ const Header: React.FC<IProps> = (props) => {
                 >
                     <ClipboardPlusFill className="header__navigation__main-icon" />
                 </Link>
-                <Link
-                    className={getSelectionClassName(PageSelection.DASHBOARDPAGE)}
-                    to={Routes.DASHBOARDPAGE}
-                >
-                    <House className="header__navigation__item__icon" />
-                    <p className="header__navigation__item__text">Dashboard</p>
-                </Link>
-                <Link
-                    className={getSelectionClassName(PageSelection.LISTOVERVIEWPAGE)}
-                    to={Routes.LISTOVERVIEWPAGE}
-                >
-                    <EggFried className="header__navigation__item__icon" />
-                    <p className="header__navigation__item__text">Suche</p>
-                </Link>
-                <Link
-                    className={getSelectionClassName(PageSelection.FAVOURITECOLLECTIONPAGE)}
-                    to={Routes.FAVOURITECOLLECTIONPAGE}
-                >
-                    <Bookmarks className="header__navigation__item__icon" />
-                    <p className="header__navigation__item__text">Collections</p>
-                </Link>
-                <Link
-                    className={getSelectionClassName(PageSelection.CARTPAGE)}
-                    to={Routes.CARTPAGE}
-                >
-                    <Cart3 className="header__navigation__item__icon" />
-                    <p className="header__navigation__item__text">Einkauf</p>
-                </Link>
-                <Link
-                    className={getSelectionClassName(PageSelection.USERPAGE)}
-                    to={Routes.USERPAGE}
-                >
-                    <PersonCircle className="header__navigation__item__icon" />
-                    <p className="header__navigation__item__text">Benutzer</p>
-                </Link>
+                <HeaderNavigationItem
+                    IconComponent={House}
+                    urlRoute={Routes.DASHBOARDPAGE}
+                    isActive={isActivePage(PageSelection.DASHBOARDPAGE)}
+                    itemText="Dashboard"
+                />
+                <HeaderNavigationItem
+                    IconComponent={EggFried}
+                    urlRoute={Routes.LISTOVERVIEWPAGE}
+                    isActive={isActivePage(PageSelection.LISTOVERVIEWPAGE)}
+                    itemText="Suche"
+                />
+                <HeaderNavigationItem
+                    IconComponent={Bookmarks}
+                    urlRoute={Routes.FAVOURITECOLLECTIONPAGE}
+                    isActive={isActivePage(PageSelection.FAVOURITECOLLECTIONPAGE)}
+                    itemText="Collections"
+                />
+                <HeaderNavigationItem
+                    IconComponent={Cart3}
+                    urlRoute={Routes.CARTPAGE}
+                    isActive={isActivePage(PageSelection.CARTPAGE)}
+                    itemText="Einkauf"
+                />
+                <HeaderNavigationItem
+                    IconComponent={PersonCircle}
+                    urlRoute={Routes.USERPAGE}
+                    isActive={isActivePage(PageSelection.USERPAGE)}
+                    itemText="Benutzer"
+                />
             </nav>
             <Link className="header__user-icon" to={Routes.USERPAGE}>
                 <PersonCircle />
