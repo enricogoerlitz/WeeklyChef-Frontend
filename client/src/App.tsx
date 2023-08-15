@@ -16,7 +16,7 @@ class App extends Component {
                     <Routes>
                         <Route path="/" element={<Navigate to="/dashboard" />} />
                         <Route path={DASHBOARDPAGE} element={<DashboardPage />} />
-                        <Route path={LISTOVERVIEWPAGE} element={<ListOverviewPage />} />
+                        <Route path={LISTOVERVIEWPAGE + "/*"} element={<ListOverviewPage />} />
                         <Route path={CREATEPAGE} element={<CreatePage />} />
                         <Route path={FAVOURITECOLLECTIONPAGE} element={<FavouriteCollectionPage />} />
                         <Route path={CARTPAGE} element={<CartPage />} />
