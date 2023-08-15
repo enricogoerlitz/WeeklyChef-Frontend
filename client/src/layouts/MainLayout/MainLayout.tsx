@@ -1,7 +1,7 @@
 import React from "react";
-import Header from "../Header/Header"
+import Header from "../../components/Header/Header";
 import { IBaseProps, IPropsNavigation } from "../../utils/interfaces";
-import BottomNavigationBar from "../BottomNavigationBar/BottomNavigationBar";
+import BottomNavigationBar from "../../components/BottomNavigationBar/BottomNavigationBar";
 import "./MainLayout.scss"
 
 
