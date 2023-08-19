@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Search, PersonCircle, ClipboardPlusFill, House, Cart3, Bookmarks, EggFried } from "react-bootstrap-icons"
 import { IPropsHeader, IPropsPageSelection } from "../../utils/interfaces";
 import Routes from "../../utils/routes";
@@ -11,6 +11,7 @@ import HeaderAppTitle from "./HeaderAppTitle";
 
 interface IProps extends IPropsHeader, IPropsPageSelection {}
 const Header: React.FC<IProps> = (props) => {
+    const searchInputRef = useRef<HTMLInputElement>(null);
 
     const getSelectionClassName = (selectedItem: PageSelection) => {
         return props.pageSelection === selectedItem ? "header__navigation__item active" : "header__navigation__item";
@@ -24,9 +25,9 @@ const Header: React.FC<IProps> = (props) => {
             <HeaderBackIcon showOption={props.showBackButton ? HeaderBackIconType.SHOW : HeaderBackIconType.HIDE_WITH_HIDDEN_ELEMENT}/>
             <HeaderAppTitle />
             <h1 className="header__title app">{props.headerText}</h1>
-            <div className="header__search"> {/* source out into a generic search input */}
+            <div className="header__search" onClick={() => searchInputRef.current!.focus()}> {/* source out into a generic search input */}
                 <Search className="header__search__icon" />
-                <input className="header__search__input" type="text" placeholder="Search" />
+                <input className="header__search__input" type="text" placeholder="Search" ref={searchInputRef} />
                 <ul className="header__search__input-dropdown">
 
                 </ul>

@@ -1,0 +1,92 @@
+@import "../../globals.scss";
+
+.dashboard {
+    &__go-to-search {
+        min-width: 2rem;
+        margin-right: .5rem;
+        font-size: 1.4rem;
+    }
+
+    &__filter {
+        display: flex;
+        margin: 1rem .8rem;
+        gap: .7rem;
+        justify-content: flex-start;
+        align-items: center;
+        max-width: 93%;
+        overflow-x: auto;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        .dashboard__go-to-search,
+        &__item {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            height: 2rem;
+            white-space: nowrap;
+            padding: .2rem .5rem;
+            border-radius: .3rem;
+            background-color: #eeeeee;
+            gap: .3rem;
+            user-select: none;
+            margin-bottom: 1px;
+            cursor: pointer;
+
+            &__text {
+                font-size: .7rem;
+            }
+
+            &__icon {
+                font-size: 1rem;
+            }
+        }
+
+        &__item {
+            min-width: max-content;
+
+            &.active {
+                background-color: #d4d4d4;
+                background-color: #606060;
+                color: #FFF; //$primary-color;
+                animation: scaleAnimation 0.3s ease-in-out forwards;
+
+            }
+        }
+    }
+
+    @media (min-width: $bp-lg) {
+        &__go-to-search {
+            display: none !important;
+        }
+
+        &__filter {
+            margin: 1rem 1.2rem;
+            &__item {
+
+                padding: .4rem .8rem;
+                &__text {
+                    font-size: 1rem;
+                }
+
+                &__icon {
+                    font-size: 1.3rem;
+                }
+            }
+        }
+    }
+}
+
+@keyframes scaleAnimation {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.95);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
