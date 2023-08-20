@@ -27,7 +27,7 @@ $animation-move-nav-icon-up: animation-move-nav-icon-up;
 
     -webkit-box-shadow: 0px 0px 9px 3px rgba(231,231,231,0.48); 
     box-shadow: 0px 0px 9px 3px rgba(231,231,231,0.48);
-    border-top: 1px solid #dedede;
+    border-top: 1px solid $border-color;
 
     &.ios-bottom-nav {
         height: $bottom-navigation-height-ios;

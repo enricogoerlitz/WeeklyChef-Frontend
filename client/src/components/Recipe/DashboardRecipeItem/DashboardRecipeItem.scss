@@ -1,17 +1,19 @@
 @import "../../../globals.scss";
 
 $recipe-caroussel-shadow-edges: 1.5rem;
-$recipe-left-offset: .6rem;
+$recipe-left-offset: .7rem;
 $recipe-img-size: 6.5rem;
 
 .recipe-container {
     position: relative;
     display: flex;
-    margin-top: 1.5rem;
+    margin-top: 2.4rem;
     border-radius: $primary-br;
-    height: 9rem;
+    height: 9.4rem;
     min-width: 20rem;
     background-color: #fff;
+
+    border: 1px solid $border-color;
 
     -webkit-box-shadow: 1px 3px 8px 2px #E9E9E9; 
     box-shadow: 1px 3px 8px 2px #E9E9E9;
@@ -26,21 +28,39 @@ $recipe-img-size: 6.5rem;
 
     &:hover {
         cursor: pointer;
+        // transform: scale(1.02);
+        // transition: transform .2s;
     }
 
-    &__img {
-        margin-top: -1.2rem;
+    &__img-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: .5rem;
         margin-left: $recipe-left-offset - .2rem;
-        border-radius: 50%;
-        width: $recipe-img-size;
-        height: $recipe-img-size;
+
+        &__img {
+            margin-top: -2rem;
+            border-radius: 50%;
+            width: $recipe-img-size;
+            height: $recipe-img-size;
+            border: 1px solid $border-color;
+        }
+
+        &__category-badge {
+            font-size: .55rem;
+            font-weight: bold;
+            border-radius: $primary-br;
+            background-color: $primary-green-transparent-color;
+            padding: .2rem .3rem;
+        }
     }
 
     &__recipe {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        padding: .4rem .6rem;
+        padding: .5rem .6rem .4rem .6rem;
 
         &__flex-column {
             display: flex;
@@ -83,7 +103,7 @@ $recipe-img-size: 6.5rem;
             font-size: .9rem;
             gap: .5rem;
             margin-bottom: .2rem;
-            margin-top: .1rem;
+            margin-top: .2rem;
 
             svg {
                 margin-bottom: -.1rem;
@@ -94,23 +114,41 @@ $recipe-img-size: 6.5rem;
     &__label-veggy-vegan-icons {
         position: absolute;
         display: flex;
-        right: .2rem;
-        top: -.7rem;
+        right: .6rem;
+        bottom: .6rem;
         gap: .3rem;
-        font-size: 1.8rem;
+        font-size: 1.7rem;
         color: rgb(99, 164, 0);
+
+        // &::after {
+        //     position: absolute;
+        //     content: "Vegan";
+        //     top: 1.65rem;
+        //     font-size: .6rem;
+        //     text-align: center;
+        //     left: -.35rem;
+        // }
     }
 
     &__action-icons {
         position: absolute;
         display: flex;
-        bottom: .75rem;
+        bottom: .55rem;
         left: $recipe-left-offset;
-        font-size: 1.3rem;
+        font-size: 1.5rem;
         width: 6rem;
-        padding: .05rem;
+        padding: .2rem .1rem;
         justify-content: space-around;
+        z-index: 5;
 
         color: $alt-black-color;
+
+        svg:hover {
+            color: red;
+        }
+
+        svg:last-child:hover {
+            color: $primary-green-color;
+        }
     }
 }

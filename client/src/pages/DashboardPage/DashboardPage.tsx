@@ -10,6 +10,7 @@ import DashboardFilterBar from "../../components/Dashboard/DashboardFilterBar/Da
 import "./DashboardPage.scss"
 import DashboardCarousel from "../../components/Dashboard/DashboardCarousel/DashboardCarousel";
 import DashboardRecipeItem from "../../components/Recipe/DashboardRecipeItem/DashboardRecipeItem";
+import RecipeList from "../../components/Recipe/RecipeList/RecipeList";
 
 
 interface IProps {}
@@ -85,6 +86,61 @@ const DashboardPage: React.FC<IProps> = (props) => {
                     <DashboardRecipeItem />
                     <DashboardRecipeItem />
                 </DashboardCarousel>
+
+            <div className="dashboard-divider"></div>
+
+            <DashboardCarousel
+                className="fav-recipies"
+                headerText="Beliebte Kategorien"
+                headerClassName="dashboard-ctn-margin"
+            >
+            </DashboardCarousel>
+
+            <div className="dashboard-divider"></div>
+
+            <RecipeList>
+                <RecipeList.Item />
+                <RecipeList.Item />
+                <RecipeList.Item />
+                <RecipeList.Item />
+                <RecipeList.Item />
+                <RecipeList.Item />
+                <RecipeList.Item />
+                <RecipeList.Item />
+                <RecipeList.Item />
+                <RecipeList.Item />
+                <RecipeList.Item />
+                <RecipeList.Item />
+                <RecipeList.Item />
+                <RecipeList.Item />
+                <RecipeList.Item />
+                <RecipeList.Item />
+                <RecipeList.Item />
+                <RecipeList.Item />
+                <RecipeList.Item />
+                <RecipeList.Item />
+                <RecipeList.Item />
+                <RecipeList.Item />
+                <RecipeList.Item />
+                <RecipeList.Item />
+                <RecipeList.Item />
+                <RecipeList.Item />
+                <RecipeList.Item />
+                <RecipeList.Item />
+                <RecipeList.Item />
+                <RecipeList.Item />
+                <RecipeList.Item />
+                <RecipeList.Item />
+                <RecipeList.Item />
+                <RecipeList.Item />
+                <RecipeList.Item />
+                <RecipeList.Item />
+                <RecipeList.Item />
+                <RecipeList.Item />
+                <RecipeList.Item />
+                <RecipeList.Item />
+                <RecipeList.Item />
+            </RecipeList>
             </MainLayout.Content>
         </MainLayout>
     );
