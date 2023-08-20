@@ -5,8 +5,10 @@ import { Link } from "react-router-dom";
 import { FaIceCream, FaBowlRice, FaBurger } from "react-icons/fa6";
 import { Search } from "react-bootstrap-icons";
 import { LISTOVERVIEWPAGE } from "../../utils/routes";
-import DashboardFilterBar from "../../components/DashboardFilterBar/DashboardFilterBar";
+import DashboardFilterBar from "../../components/Dashboard/DashboardFilterBar/DashboardFilterBar";
 import "./DashboardPage.scss"
+import DashboardCarousel from "../../components/Dashboard/DashboardCarousel/DashboardCarousel";
+import DashboardRecipeItem from "../../components/Recipe/DashboardRecipeItem/DashboardRecipeItem";
 
 
 interface IProps {}
@@ -26,17 +28,20 @@ const DashboardPage: React.FC<IProps> = (props) => {
                     <DashboardFilterBar.Item Icon={FaBowlRice} text="Beilage" />
                     <DashboardFilterBar.Item Icon={FaIceCream} text="Dessert" />
                 </DashboardFilterBar>
-                <section className="dashboard__carousel top-rating-recepies">
-                    <div className="dashboard__carousel__header top-rating-recepies">
-                        <p>Top Ratings</p>
-                        <p>Mehr Anzeigen</p>
-                    </div>
-                    <section className="dashboard__carousel__content">
-                        <Link to="#" className="recipe-container">
-                            recipe
-                        </Link>
-                    </section>
-                </section>
+
+
+                <DashboardCarousel
+                    className="top-rating-recepies"
+                    headerText="Top Ratings"
+                    headerShowMoreLink="#"
+                >
+                    <DashboardRecipeItem />
+                    <DashboardRecipeItem />
+                    <DashboardRecipeItem />
+                    <DashboardRecipeItem />
+                </DashboardCarousel>
+
+
 
                 
                 <section className="dashboard__carousel new-recipies">

@@ -1,5 +1,5 @@
 import React from "react"
-import { IBaseProps } from "../../utils/interfaces";
+import { IBaseProps } from "../../../utils/interfaces";
 import DashboardFilterItem from "./DashboardFilterItem";
 import "./DashboardFilterBar.scss"
 
@@ -10,7 +10,7 @@ export type DashboardFilterBarType = {
 interface IProps extends IBaseProps {}
 const DashboardFilterBar: React.FC<IProps> & DashboardFilterBarType= (props) => {
     return (
-        <section className="dashboard__filter">
+        <section className="dashboard__filter text">
             {props.children}
         </section>
 

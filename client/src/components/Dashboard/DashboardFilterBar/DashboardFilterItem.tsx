@@ -1,6 +1,7 @@
 import React from "react"
-import { removeActiveClassName } from "../../utils/helper";
-import { ACTIVE_CLASSNAME } from "../../utils/constants";
+import { removeActiveClassName } from "../../../utils/helper";
+import { ACTIVE_CLASSNAME } from "../../../utils/constants";
+
 
 
 interface IProps {

@@ -61,6 +61,7 @@ $animation-move-nav-icon-up: animation-move-nav-icon-up;
 
         &:hover {
             transform: scale(1.1);
+            cursor: pointer;
         }
 
         &.active {
