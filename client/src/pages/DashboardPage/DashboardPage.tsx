@@ -98,7 +98,7 @@ const DashboardPage: React.FC<IProps> = (props) => {
 
             <div className="dashboard-divider"></div>
 
-            <RecipeList>
+            <RecipeList jumpToId="dashboard-recipe-list">
                 <RecipeList.Item />
                 <RecipeList.Item />
                 <RecipeList.Item />

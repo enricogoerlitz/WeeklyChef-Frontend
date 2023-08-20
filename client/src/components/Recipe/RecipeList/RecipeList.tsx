@@ -6,17 +6,23 @@ import { ArrowClockwise } from "react-bootstrap-icons";
 type RecipeListType = {
     Item: typeof RecipeListItem
 }
-interface IProps extends IBaseProps {}
+interface IProps extends IBaseProps {
+    jumpToId: string,
+}
 const RecipeList: React.FC<IProps> & RecipeListType = (props) => {
+    const handleRefreshClick = () => {
+        const targetElement = document.getElementById(props.jumpToId) as HTMLDivElement;
+        targetElement.scrollIntoView({ behavior: "smooth" });
+    }
     return (
         <>
             <div className="recipe-list-header">
                 <h3 className="recipe-list-header__title">Zufällige Rezepte</h3>
-                <button className="recipe-list-header__refresh-btn">
+                <button onClick={handleRefreshClick} className="recipe-list-header__refresh-btn">
                     <ArrowClockwise />
                 </button>
             </div>
-            <section className="recipe-list-container">
+            <section id={props.jumpToId} className="recipe-list-container">
                 {props.children}
             </section>
         </>
