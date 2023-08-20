@@ -75,7 +75,7 @@ $animation-fade-in-nav-text: animation-nav-text;
     &__user-icon {
         width: $side-element-width;
         all: unset;
-        color: #454545;
+        color: $alt-black-color;
         font-size: 1.8rem;
         padding-top: .3rem;
         &:hover {

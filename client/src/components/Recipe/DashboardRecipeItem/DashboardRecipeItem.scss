@@ -1,5 +1,116 @@
+@import "../../../globals.scss";
+
+$recipe-caroussel-shadow-edges: 1.5rem;
+$recipe-left-offset: .6rem;
+$recipe-img-size: 6.5rem;
+
 .recipe-container {
+    position: relative;
+    display: flex;
+    margin-top: 1.5rem;
+    border-radius: $primary-br;
+    height: 9rem;
+    min-width: 20rem;
+    background-color: #fff;
+
+    -webkit-box-shadow: 1px 3px 8px 2px #E9E9E9; 
+    box-shadow: 1px 3px 8px 2px #E9E9E9;
+
+    &:first-child {
+        margin-left: $recipe-caroussel-shadow-edges;
+    }
+
+    &:last-child {
+        margin-right: $recipe-caroussel-shadow-edges;
+    }
+
     &:hover {
         cursor: pointer;
+    }
+
+    &__img {
+        margin-top: -1.2rem;
+        margin-left: $recipe-left-offset - .2rem;
+        border-radius: 50%;
+        width: $recipe-img-size;
+        height: $recipe-img-size;
+    }
+
+    &__recipe {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: .4rem .6rem;
+
+        &__flex-column {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &__title {
+            all: unset;
+            font-size: 1rem;
+            font-weight: bold;
+            margin-bottom: .3rem;
+
+            display: -webkit-box;
+            overflow: hidden;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            text-overflow: ellipsis;
+        }
+
+        &__subtitle {
+            all: unset;
+            font-size: .7rem;
+            
+            display: -webkit-box;
+            overflow: hidden;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            text-overflow: ellipsis;
+        }
+
+        &__rating {
+            font-size: 1.2rem;
+            color: $star-rating-color;
+        }
+
+        &__info {
+            display: flex;
+            color: $alt-black-color;
+            align-items: center;
+            font-size: .9rem;
+            gap: .5rem;
+            margin-bottom: .2rem;
+            margin-top: .1rem;
+
+            svg {
+                margin-bottom: -.1rem;
+            }
+        }
+    }
+
+    &__label-veggy-vegan-icons {
+        position: absolute;
+        display: flex;
+        right: .2rem;
+        top: -.7rem;
+        gap: .3rem;
+        font-size: 1.8rem;
+        color: rgb(99, 164, 0);
+    }
+
+    &__action-icons {
+        position: absolute;
+        display: flex;
+        bottom: .75rem;
+        left: $recipe-left-offset;
+        font-size: 1.3rem;
+        width: 6rem;
+        padding: .05rem;
+        justify-content: space-around;
+
+        color: $alt-black-color;
     }
 }

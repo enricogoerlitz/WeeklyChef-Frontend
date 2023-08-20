@@ -1,21 +1,42 @@
+@import "../../../globals.scss";
+
+$fs-header: 1rem;
+$carusell-left-righ-padding: 1.5rem;
 
 .dashboard {
     &__carousel__header {
         display: flex;
         justify-content: space-between;
-        padding: .3rem;
+        padding: .3rem 1rem;
         user-select: none;
-    }
+        align-items: flex-end;
 
+        &__text {
+            font-size: $fs-header + .3rem;
+            font-weight: bold;
+        }
+
+        &__link {
+            font-size: $fs-header;
+            color: #0000FF;
+            
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+    
     &__carousel-container {
         display: flex;
         width: 100%;
-        gap: .7rem;
+        gap: 1rem;
         justify-content: flex-start;
         align-items: center;
         max-width: 100%;
         overflow-x: auto;
         user-select: none;
+        padding-bottom: 1rem;
+
         
         &::-webkit-scrollbar {
             display: none;

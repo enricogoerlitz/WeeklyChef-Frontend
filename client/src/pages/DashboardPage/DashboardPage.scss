@@ -1,0 +1,16 @@
+@import "../../globals.scss";
+
+.dashboard-ctn-margin {
+    margin-top: 1.5rem;
+}
+
+.dashboard-divider {
+    height: 1px;
+    background-color: #e0e0e0;
+    width: 95%;
+    margin: 1.5rem auto;
+
+    @media (min-width: $bp-lg) {
+        width: 98%;
+    }
+}

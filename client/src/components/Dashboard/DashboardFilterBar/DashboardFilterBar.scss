@@ -3,7 +3,6 @@
 .dashboard {
     &__go-to-search {
         min-width: 2rem;
-        margin-right: .5rem;
         font-size: 1.4rem;
     }
 
@@ -28,7 +27,7 @@
             height: 2rem;
             white-space: nowrap;
             padding: .2rem .5rem;
-            border-radius: .3rem;
+            border-radius: $primary-br;
             background-color: #eeeeee;
             gap: .3rem;
             user-select: none;
