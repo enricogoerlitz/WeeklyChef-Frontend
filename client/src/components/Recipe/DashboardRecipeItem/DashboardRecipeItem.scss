@@ -3,6 +3,7 @@
 $recipe-caroussel-shadow-edges: 1.5rem;
 $recipe-left-offset: .7rem;
 $recipe-img-size: 6.5rem;
+$recipe-img-size-lg: 9rem;
 
 .recipe-container {
     position: relative;
@@ -117,15 +118,6 @@ $recipe-img-size: 6.5rem;
         gap: .3rem;
         font-size: 1.7rem;
         color: rgb(99, 164, 0);
-
-        // &::after {
-        //     position: absolute;
-        //     content: "Vegan";
-        //     top: 1.65rem;
-        //     font-size: .6rem;
-        //     text-align: center;
-        //     left: -.35rem;
-        // }
     }
 
     &__action-icons {
@@ -147,6 +139,61 @@ $recipe-img-size: 6.5rem;
 
         svg:last-child:hover {
             color: $primary-green-color;
+        }
+    }
+
+    @media (min-width: $bp-lg) {
+        height: 13rem;
+        min-width: 24.5rem;
+
+        &__img-container {
+            &__img {
+                width: $recipe-img-size-lg;
+                height: $recipe-img-size-lg;
+            }
+
+            &__category-badge {
+                font-size: .8rem;
+                border-radius: $primary-br;
+                padding: .3rem .4rem;
+        }
+        }
+
+        &__action-icons {
+            gap: .7rem;
+            left: 1.75rem;
+            width: unset;
+            font-size: 1.7rem;
+        }
+
+        &__recipe {
+            &__title {
+                font-size: 1.3rem;
+                margin-bottom: .3rem;
+    
+                max-height: 4.5rem;
+                line-height: 1.5rem;
+            }
+
+            &__subtitle {
+                font-size: .9rem;
+                
+                max-height: 2rem;
+                line-height: 1rem;
+            }
+
+            &__rating {
+                font-size: 1.5rem;
+            }
+
+            &__info {
+                font-size: 1.05rem;
+                gap: .8rem;
+
+                svg {
+                    margin-bottom: -.1rem;
+                }
+            }
         }
     }
 }

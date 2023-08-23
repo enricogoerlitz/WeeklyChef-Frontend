@@ -14,6 +14,13 @@ $recipe-img-size: 10rem;
     font-weight: bold;
     border-bottom: 1px solid $border-color;
     z-index: 5;
+    user-select: none;
+
+    &__refresh-btn {
+        &:hover {
+            cursor: pointer;
+        }
+    }
 }
 
 .recipe-list-container {
@@ -23,6 +30,7 @@ $recipe-img-size: 10rem;
     padding: .5rem 1rem;
     gap: 0rem 2rem;
 
+
     &__item {
         display: flex;
         position: relative;
@@ -30,6 +38,7 @@ $recipe-img-size: 10rem;
         align-items: center;
         justify-content: center;
         background-color: #fff;
+        height: 21rem;
         width: 100%;
         max-width: 18rem;
         border: 1px solid $border-color;
@@ -75,26 +84,55 @@ $recipe-img-size: 10rem;
                 height: $recipe-img-size;
                 border: 1px solid $border-color;
                 margin-bottom: 1rem;
+
+                -webkit-box-shadow: -2px 2px 15px 3px #d0d0d0;
+                box-shadow: -2px 2px 15px 3px #d0d0d0;
             }
 
             &__title {
                 all: unset;
-                font-size: 1rem;
+                font-size: 1.3rem;
                 font-weight: bold;
                 margin-bottom: .3rem;
 
                 overflow: hidden;
-                max-height: 2.4rem;
-                line-height: 1.2rem;
+                max-height: 3rem;
+                line-height: 1.5rem;
             }
 
             &__subtitle {
                 all: unset;
-                font-size: .7rem;
+                font-size: .9rem;
                 
                 overflow: hidden;
-                max-height: 1.6rem;
-                line-height: .8rem;
+                max-height: 2rem;
+                line-height: 1rem;
+                margin-bottom: .6rem;
+            }
+
+            &__tag-badges {
+                padding: .3rem;
+                width: 13rem;
+                display: flex;
+                gap: .4rem;
+                overflow-y: auto;
+
+                &::-webkit-scrollbar {
+                    display: none;
+                }
+
+                &__category-badge {
+                    font-weight: bold;
+                    background-color: $primary-green-transparent-color;
+                }
+
+                &__category-badge,
+                &__badge {
+                    font-size: .8rem;
+                    border: 1px solid $border-color;
+                    border-radius: $primary-br;
+                    padding: .2rem .3rem;
+                }
             }
         }
 
@@ -103,9 +141,17 @@ $recipe-img-size: 10rem;
             display: flex;
             justify-content: center;
             align-items: center;
+            margin: .6rem 0 .3rem 0;
+            gap: 1rem;
+
+            &__item {
+                display: flex;
+                align-items: center;
+            }
         }
 
         &__rating {
+            font-size: 1.4rem;
             color: $star-rating-color;
             display: flex;
             justify-content: center;
@@ -129,4 +175,11 @@ $recipe-img-size: 10rem;
             }
         }
     }
+}
+
+.recipe-list-container__item-flex-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
 }

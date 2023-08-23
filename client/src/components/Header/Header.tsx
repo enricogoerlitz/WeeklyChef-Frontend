@@ -5,9 +5,9 @@ import Routes from "../../utils/routes";
 import { Link } from "react-router-dom";
 import { PageSelection } from "../../utils/enums";
 import HeaderNavigationItem from "./HeaderNavigationItem";
-import HeaderBackIcon, { HeaderBackIconType} from "./HeaderBackIcon";
 import "./Header.scss";
 import HeaderAppTitle from "./HeaderAppTitle";
+import HeaderBackIcon from "./HeaderBackIcon";
 
 interface IProps extends IPropsHeader, IPropsPageSelection {}
 const Header: React.FC<IProps> = (props) => {
@@ -22,12 +22,12 @@ const Header: React.FC<IProps> = (props) => {
 
     return (
         <header className="header">
-            <HeaderBackIcon showOption={props.showBackButton ? HeaderBackIconType.SHOW : HeaderBackIconType.HIDE_WITH_HIDDEN_ELEMENT}/>
+            {props.showBackButton && <HeaderBackIcon />}
             <HeaderAppTitle />
             <h1 className="header__title app">{props.headerText}</h1>
             <div className="header__search" onClick={() => searchInputRef.current!.focus()}> {/* source out into a generic search input */}
                 <Search className="header__search__icon" />
-                <input className="header__search__input" type="text" placeholder="Search" ref={searchInputRef} />
+                <input onFocus={() => document.getElementById("std-overlay")!.classList.add("active")} className="header__search__input" type="text" placeholder="Search" ref={searchInputRef} />
                 <ul className="header__search__input-dropdown">
 
                 </ul>

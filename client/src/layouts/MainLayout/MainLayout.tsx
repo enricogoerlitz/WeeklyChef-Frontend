@@ -3,6 +3,7 @@ import Header from "../../components/Header/Header";
 import { IBaseProps, IPropsNavigation } from "../../utils/interfaces";
 import BottomNavigationBar from "../../components/BottomNavigationBar/BottomNavigationBar";
 import "./MainLayout.scss"
+import Overlay from "../../components/Overlay/Overlay";
 
 
 export const LeftSide: React.FC<IBaseProps> = (props) => {
@@ -26,15 +27,18 @@ type MainLayoutType = {
 interface IProps extends IBaseProps, IPropsNavigation {}
 const MainLayout: React.FC<IProps> & MainLayoutType = (props) => {
     return (
-        <div className="main-layout-container">
-            <Header
-                headerText={props.headerText}
-                showBackButton={props.showBackButton}
-                pageSelection={props.pageSelection}
-            />
-            {props.children}
-            <BottomNavigationBar pageSelection={props.pageSelection} />
-        </div>
+        <>
+            <Overlay />
+            <div className="main-layout-container">
+                <Header
+                    headerText={props.headerText}
+                    showBackButton={props.showBackButton}
+                    pageSelection={props.pageSelection}
+                />
+                {props.children}
+                <BottomNavigationBar pageSelection={props.pageSelection} />
+            </div>
+        </>
     );
 };
 

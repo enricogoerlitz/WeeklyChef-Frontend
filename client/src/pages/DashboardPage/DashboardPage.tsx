@@ -2,7 +2,7 @@ import React from "react";
 import MainLayout from "../../layouts/MainLayout/MainLayout";
 import { PageSelection } from "../../utils/enums";
 import { Link } from "react-router-dom";
-import { FaIceCream, FaBowlRice, FaBurger } from "react-icons/fa6";
+import { FaIceCream, FaBowlRice, FaBurger, FaPizzaSlice } from "react-icons/fa6";
 import { MdFreeBreakfast } from "react-icons/md";
 import { Search } from "react-bootstrap-icons";
 import { LISTOVERVIEWPAGE } from "../../utils/routes";
@@ -30,10 +30,10 @@ const DashboardPage: React.FC<IProps> = (props) => {
                     <DashboardFilterBar.Item Icon={MdFreeBreakfast} text="Frühstück" />
                     <DashboardFilterBar.Item Icon={FaBowlRice} text="Beilage" />
                     <DashboardFilterBar.Item Icon={FaIceCream} text="Dessert" />
+                    <DashboardFilterBar.Item Icon={FaPizzaSlice} text="Gebäck / Teig" />
                     
                 </DashboardFilterBar>
                 <div className="dashboard-divider"></div>
-
 
                 <DashboardCarousel
                     className="top-rating-recepies"

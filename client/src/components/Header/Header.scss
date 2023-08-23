@@ -4,7 +4,6 @@ $header-item-border-radius: .7rem;
 $app-name-font-size: 2rem;
 $nav-icon-margin: .4rem;
 $main-icon-size: 3rem;
-$side-element-width: 1rem;
 $added-padding: .5rem;
 
 $text-animation-duration: .1s;
@@ -30,13 +29,15 @@ $animation-fade-in-nav-text: animation-nav-text;
     height: $header-height-mobile;
     z-index: 10;
     background-color: #fff;
-    background-color: transparent;
     border-bottom: 1px solid $border-color;
     -webkit-box-shadow: 0px 0px 9px 3px rgba(231,231,231,0.48); 
     box-shadow: 0px 0px 9px 3px rgba(231,231,231,0.48);
+    text-align: center;
 
     &__back-icon {
-        width: $side-element-width;
+        position: absolute;
+        top: .3rem;
+        left: 1rem;
         font-size: 1.3rem;
         padding-top: .3rem;
 
@@ -48,6 +49,8 @@ $animation-fade-in-nav-text: animation-nav-text;
         all: unset;
         user-select: none;
         font-weight: bolder;
+        width: 100%;
+        text-align: center;
 
         &.app {
             font-size: 1rem;
@@ -73,11 +76,15 @@ $animation-fade-in-nav-text: animation-nav-text;
     }
 
     &__user-icon {
-        width: $side-element-width;
+        position: absolute;
+        top: 0;
+        right: 0;
+
         all: unset;
         color: $alt-black-color;
         font-size: 1.8rem;
         padding-top: .3rem;
+
         &:hover {
             cursor: pointer;
         }
@@ -96,6 +103,8 @@ $animation-fade-in-nav-text: animation-nav-text;
                 display: flex;
                 align-items: center;
                 cursor: pointer;
+                width: unset;
+
 
                 & svg {
                     rotate: 5deg;
@@ -124,6 +133,7 @@ $animation-fade-in-nav-text: animation-nav-text;
 
             &__input {
                 all: unset;
+                text-align: start;
             }
 
             &:focus-within {

@@ -6,10 +6,12 @@ import { Bookmark, Cart3, Heart, Star, StarFill, StarHalf } from "react-bootstra
 import { BiSolidLeaf } from "react-icons/bi";
 import { AiFillSignal, AiFillClockCircle } from "react-icons/ai";
 
-interface IProps {}
+interface IProps {
+    recipeName?: string,
+}
 const DashboardRecipeItem: React.FC<IProps> = (props) => {
     return (
-        <Link to="#" className="recipe-container">
+        <Link to="#" title={props.recipeName}  className="recipe-container">
             <div className="recipe-container__img-container">
                 <img src={lasagnePng} alt="recipe" className="recipe-container__img-container__img"/>
                 <span className="recipe-container__img-container__category-badge">Hauptspeise</span>
