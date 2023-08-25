@@ -11,6 +11,10 @@ export const isIOSDevice = () => {
     ].includes(navigator.platform)
 }
 
+export const isTouchDevice = (): boolean => {
+    return 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+}
+
 export const removeActiveClassName = (findElementByClassName: string) => {
     const filterItems = Array.from(
         document.getElementsByClassName(findElementByClassName)

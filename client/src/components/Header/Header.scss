@@ -73,6 +73,10 @@ $animation-fade-in-nav-text: animation-nav-text;
 
     &__navigation {
         display: none;
+
+        &__main-icon {
+            color: #fff;
+        }
     }
 
     &__user-icon {

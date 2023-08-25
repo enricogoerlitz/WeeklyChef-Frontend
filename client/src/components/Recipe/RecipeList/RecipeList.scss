@@ -21,6 +21,10 @@ $recipe-img-size: 10rem;
             cursor: pointer;
         }
     }
+
+    @media (min-width: $bp-lg) {
+        font-size: 1.5rem;
+    }
 }
 
 .recipe-list-container {

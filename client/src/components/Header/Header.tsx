@@ -27,7 +27,14 @@ const Header: React.FC<IProps> = (props) => {
             <h1 className="header__title app">{props.headerText}</h1>
             <div className="header__search" onClick={() => searchInputRef.current!.focus()}> {/* source out into a generic search input */}
                 <Search className="header__search__icon" />
-                <input onFocus={() => document.getElementById("std-overlay")!.classList.add("active")} className="header__search__input" type="text" placeholder="Search" ref={searchInputRef} />
+                <input
+                    onFocus={() => document.getElementById("std-overlay")!.classList.add("active")} /** in helper auslafern! */
+                    onBlur={() => document.getElementById("std-overlay")!.classList.remove("active")} /** in helper auslafern! */
+                    className="header__search__input"
+                    type="text"
+                    placeholder="Search"
+                    ref={searchInputRef}
+                />
                 <ul className="header__search__input-dropdown">
 
                 </ul>

@@ -1,10 +1,14 @@
 @import "../../../globals.scss";
 
 $fs-header: 1rem;
+$fs-header-desktop: 1.2rem;
+$fs-header-extra: .3rem;
 $carusell-left-righ-padding: 1.5rem;
 
 .dashboard {
+
     &__carousel__header {
+        position: relative;
         display: flex;
         justify-content: space-between;
         padding: .3rem 1rem;
@@ -12,7 +16,7 @@ $carusell-left-righ-padding: 1.5rem;
         align-items: flex-end;
 
         &__text {
-            font-size: $fs-header + .3rem;
+            font-size: $fs-header + $fs-header-extra;
             font-weight: bold;
         }
 
@@ -24,9 +28,39 @@ $carusell-left-righ-padding: 1.5rem;
                 cursor: pointer;
             }
         }
+
+        &__nav-btn {
+            display: flex;
+            position: absolute;
+            top: 2rem;
+            bottom: -13rem;
+            z-index: 1;
+            width: 3rem;
+            align-items: center;
+            font-size: 3rem;
+            color: #000;
+            font-weight: bold;
+
+            &:hover {
+                cursor: pointer;
+                transform: scale(1.15);
+                transition: transform .2s;
+            }
+
+            &.right {
+                right: 0;
+                border-radius: $primary-br 0 0 $primary-br;
+            }
+            
+            &.left {
+                left: 0;
+                border-radius: 0 $primary-br $primary-br 0;
+            }
+        }
     }
     
     &__carousel-container {
+        position: relative;
         display: flex;
         width: 100%;
         gap: 1rem;
@@ -36,10 +70,26 @@ $carusell-left-righ-padding: 1.5rem;
         overflow-x: auto;
         user-select: none;
         padding-bottom: 1rem;
+        scroll-behavior: smooth;
 
         
         &::-webkit-scrollbar {
             display: none;
+        }
+    }
+
+    @media (min-width: $bp-lg) {
+        &__carousel__header {
+            &__text {
+                font-size: $fs-header-desktop + $fs-header-extra;
+            }
+            &__link {
+                font-size: $fs-header-desktop;
+            }
+            &__nav-btn {
+                top: 2.5rem;
+                bottom: -17.5rem;
+            }
         }
     }
 }

@@ -145,6 +145,7 @@ $recipe-img-size-lg: 9rem;
     @media (min-width: $bp-lg) {
         height: 13rem;
         min-width: 24.5rem;
+        margin-top: 2.8rem;
 
         &__img-container {
             &__img {
@@ -169,7 +170,7 @@ $recipe-img-size-lg: 9rem;
         &__recipe {
             &__title {
                 font-size: 1.3rem;
-                margin-bottom: .3rem;
+                margin-top: .2rem;
     
                 max-height: 4.5rem;
                 line-height: 1.5rem;

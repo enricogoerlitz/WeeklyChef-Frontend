@@ -17,7 +17,7 @@ const RecipeList: React.FC<IProps> & RecipeListType = (props) => {
     return (
         <>
             <div className="recipe-list-header">
-                <h3 className="recipe-list-header__title">Zufällige Rezepte</h3>
+                <h3 className="recipe-list-header__title">Deine Rezeptvorschläge</h3>
                 <button onClick={handleRefreshClick} className="recipe-list-header__refresh-btn">
                     <ArrowClockwise />
                 </button>
