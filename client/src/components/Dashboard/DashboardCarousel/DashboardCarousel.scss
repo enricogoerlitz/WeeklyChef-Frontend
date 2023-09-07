@@ -35,9 +35,10 @@ $carusell-left-righ-padding: 1.5rem;
             top: 2rem;
             bottom: -13rem;
             z-index: 1;
-            width: 3rem;
+            width: 2.5rem;
+            font-size: 2rem;
             align-items: center;
-            font-size: 3rem;
+            justify-content: center;
             color: #000;
             font-weight: bold;
 
@@ -89,6 +90,8 @@ $carusell-left-righ-padding: 1.5rem;
             &__nav-btn {
                 top: 2.5rem;
                 bottom: -17.5rem;
+                width: 3rem;
+                font-size: 3rem;
             }
         }
     }

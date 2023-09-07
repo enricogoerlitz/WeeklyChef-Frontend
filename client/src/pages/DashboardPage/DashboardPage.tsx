@@ -11,10 +11,13 @@ import "./DashboardPage.scss"
 import DashboardCarousel from "../../components/Dashboard/DashboardCarousel/DashboardCarousel";
 import DashboardRecipeItem from "../../components/Recipe/DashboardRecipeItem/DashboardRecipeItem";
 import RecipeList from "../../components/Recipe/RecipeList/RecipeList";
+import recipeExampleData from "../../db/recipeExampleData";
 
 
 interface IProps {}
 const DashboardPage: React.FC<IProps> = (props) => {
+    const recipes = recipeExampleData;
+
     return (
         <MainLayout
             pageSelection={PageSelection.DASHBOARDPAGE}
@@ -41,14 +44,8 @@ const DashboardPage: React.FC<IProps> = (props) => {
                     headerShowMoreLink="#"
                     headerClassName="dashboard-ctn-margin"
                 >
-                    <DashboardRecipeItem />
-                    <DashboardRecipeItem />
-                    <DashboardRecipeItem />
-                    <DashboardRecipeItem />
-                    <DashboardRecipeItem />
-                    <DashboardRecipeItem />
-                    <DashboardRecipeItem />
-                    <DashboardRecipeItem />
+                    {recipes.map(
+                        recipe => <DashboardRecipeItem key={recipe.id} recipe={recipe} />)}
                 </DashboardCarousel>
 
                 <div className="dashboard-divider"></div>
@@ -59,14 +56,8 @@ const DashboardPage: React.FC<IProps> = (props) => {
                     headerShowMoreLink="#"
                     headerClassName="dashboard-ctn-margin"
                 >
-                    <DashboardRecipeItem />
-                    <DashboardRecipeItem />
-                    <DashboardRecipeItem />
-                    <DashboardRecipeItem />
-                    <DashboardRecipeItem />
-                    <DashboardRecipeItem />
-                    <DashboardRecipeItem />
-                    <DashboardRecipeItem />
+                    {recipes.map(
+                        recipe => <DashboardRecipeItem key={recipe.id} recipe={recipe} />)}
                 </DashboardCarousel>
 
                 <div className="dashboard-divider"></div>
@@ -77,14 +68,8 @@ const DashboardPage: React.FC<IProps> = (props) => {
                     headerShowMoreLink="#"
                     headerClassName="dashboard-ctn-margin"
                 >
-                    <DashboardRecipeItem />
-                    <DashboardRecipeItem />
-                    <DashboardRecipeItem />
-                    <DashboardRecipeItem />
-                    <DashboardRecipeItem />
-                    <DashboardRecipeItem />
-                    <DashboardRecipeItem />
-                    <DashboardRecipeItem />
+                    {recipes.map(
+                        recipe => <DashboardRecipeItem key={recipe.id} recipe={recipe} />)}
                 </DashboardCarousel>
 
             <div className="dashboard-divider"></div>
@@ -99,47 +84,8 @@ const DashboardPage: React.FC<IProps> = (props) => {
             <div className="dashboard-divider"></div>
 
             <RecipeList jumpToId="dashboard-recipe-list">
-                <RecipeList.Item />
-                <RecipeList.Item />
-                <RecipeList.Item />
-                <RecipeList.Item />
-                <RecipeList.Item />
-                <RecipeList.Item />
-                <RecipeList.Item />
-                <RecipeList.Item />
-                <RecipeList.Item />
-                <RecipeList.Item />
-                <RecipeList.Item />
-                <RecipeList.Item />
-                <RecipeList.Item />
-                <RecipeList.Item />
-                <RecipeList.Item />
-                <RecipeList.Item />
-                <RecipeList.Item />
-                <RecipeList.Item />
-                <RecipeList.Item />
-                <RecipeList.Item />
-                <RecipeList.Item />
-                <RecipeList.Item />
-                <RecipeList.Item />
-                <RecipeList.Item />
-                <RecipeList.Item />
-                <RecipeList.Item />
-                <RecipeList.Item />
-                <RecipeList.Item />
-                <RecipeList.Item />
-                <RecipeList.Item />
-                <RecipeList.Item />
-                <RecipeList.Item />
-                <RecipeList.Item />
-                <RecipeList.Item />
-                <RecipeList.Item />
-                <RecipeList.Item />
-                <RecipeList.Item />
-                <RecipeList.Item />
-                <RecipeList.Item />
-                <RecipeList.Item />
-                <RecipeList.Item />
+                {recipes.map(
+                    recipe => <RecipeList.Item key={recipe.id} recipe={recipe} />)}
             </RecipeList>
             </MainLayout.Content>
         </MainLayout>

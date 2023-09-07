@@ -16,6 +16,7 @@ const Carousel: React.FC<IProps> = (props) => {
 
     const thisCarousel = useRef<HTMLInputElement>(null);
     const isTouchScrollableDevice = isTouchDevice();
+    const MAX_SCROLL_SIDE_OFFSET = 10;
 
     const getHeaderClassName = (): string => {
         const BASE_CLASSNAME = "dashboard__carousel__header"
@@ -44,31 +45,57 @@ const Carousel: React.FC<IProps> = (props) => {
     }
 
     const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>): void => {
-        const maxOffset = 10;
-
-        const isShowRightScrollButton = (
-            thisCarousel.current!.scrollWidth -
-            thisCarousel.current!.offsetWidth -
-            thisCarousel.current!.scrollLeft) > maxOffset;
-        const isShowLeftScrollButton = thisCarousel.current!.scrollLeft > maxOffset;
-        
         const isMouseLeftSide = e.clientX < window.outerWidth / 2;
 
+        const isShowRightScrollButton = getIsShowRightScrollButton();
+        const isShowLeftScrollButton = getIsShowLeftScrollButton();
+        
         if(isShowRightScrollButton && !isMouseLeftSide) {
             setShowRightScrollButton(true);
         } else if(isShowLeftScrollButton && isMouseLeftSide) {
             setShowLeftScrollButton(true);
         }
 
-        if((isMouseLeftSide && showRightScrollButton) || !isShowRightScrollButton) {
+        const hideRightScrollButton = (isMouseLeftSide && showRightScrollButton) ||
+                                      !isShowRightScrollButton
+
+        const hideLeftScrollButton = (!isMouseLeftSide && showLeftScrollButton) ||
+                                     !isShowLeftScrollButton
+        if(hideRightScrollButton) {
             setShowRightScrollButton(false);
-        } else if((!isMouseLeftSide && showLeftScrollButton) || !isShowLeftScrollButton) {
+        } else if(hideLeftScrollButton) {
             setShowLeftScrollButton(false);
         }
     }
 
+    const handleOnScrollCarousel = (): void => {
+        if(!getIsShowLeftScrollButton() && showLeftScrollButton) {
+            setShowLeftScrollButton(false);
+        } else if(!getIsShowRightScrollButton() && showRightScrollButton) {
+            setShowRightScrollButton(false);
+        }
+    }
+
+    const getIsShowRightScrollButton = (): boolean => {
+        return (
+            thisCarousel.current!.scrollWidth -
+            thisCarousel.current!.offsetWidth -
+            thisCarousel.current!.scrollLeft
+        ) > MAX_SCROLL_SIDE_OFFSET;
+    }
+
+    const getIsShowLeftScrollButton = (): boolean => {
+        return thisCarousel.current!.scrollLeft > MAX_SCROLL_SIDE_OFFSET;
+    }
+
+    const resetShowScrollButton = (): void => {
+        setShowLeftScrollButton(false);
+        setShowRightScrollButton(false);
+    }
+
     return (
         <div
+            onMouseLeave={resetShowScrollButton}
             onMouseMove={handleMouseMove}
             className="dashboard__carousel"
         >
@@ -93,6 +120,7 @@ const Carousel: React.FC<IProps> = (props) => {
                     <Link to={props.headerShowMoreLink} className="dashboard__carousel__header__link">Mehr Anzeigen</Link>}
             </div>
             <section
+                onScroll={handleOnScrollCarousel}
                 ref={thisCarousel} className={getSectionClassName()}>
                 {props.children}
             </section>

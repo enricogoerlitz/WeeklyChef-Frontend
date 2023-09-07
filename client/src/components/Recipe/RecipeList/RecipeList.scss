@@ -120,6 +120,7 @@ $recipe-img-size: 10rem;
                 display: flex;
                 gap: .4rem;
                 overflow-y: auto;
+                margin-bottom: .6rem;
 
                 &::-webkit-scrollbar {
                     display: none;
@@ -127,7 +128,23 @@ $recipe-img-size: 10rem;
 
                 &__category-badge {
                     font-weight: bold;
-                    background-color: $primary-green-transparent-color;
+
+                    &.green {
+
+                        background-color: $primary-green-transparent-color;
+                    }
+                    &.blue {
+                        background-color: $primary-blue-transparent-color;
+                    }
+                    &.yellow {
+                        background-color: $primary-yellow-transparent-color;
+                    }
+                    &.purple {
+                        background-color: $primary-purple-transparent-color;
+                    }
+                    &.pink {
+                        background-color: $primary-pink-transparent-color;
+                    }
                 }
 
                 &__category-badge,
@@ -136,6 +153,7 @@ $recipe-img-size: 10rem;
                     border: 1px solid $border-color;
                     border-radius: $primary-br;
                     padding: .2rem .3rem;
+                    white-space: nowrap;
                 }
             }
         }
